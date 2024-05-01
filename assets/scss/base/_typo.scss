@@ -1,0 +1,82 @@
+@mixin boldCaslon {
+    font-family: BigCaslon;
+    font-size: 28px;
+    line-height: 100%;
+    font-weight: 700;
+}
+.boldCaslon{
+    @include boldCaslon;
+}
+
+@mixin boldBiggest {
+    font-size: 24px;
+    line-height: 135%;
+    font-weight: 700;
+}
+.boldBiggest{
+    @include boldBiggest;
+}
+
+
+@mixin boldBigger{
+    font-size: 22px;
+    line-height: 135%;
+    font-weight: 700;
+}
+.boldBigger{
+    @include boldBigger;
+}
+
+@mixin boldBigP{
+    font-size: 18px;
+    line-height: 150%;
+    font-weight: 700;
+}
+.boldBigP{
+    @include boldBigP;
+}
+
+@mixin boldP{
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 700;
+}
+.boldP{
+    @include boldP;
+}
+
+@mixin medSmallP{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 500;
+}
+.medSmallP{
+    @include medSmallP;
+}
+
+@mixin regP{
+    font-size: 16px;
+    line-height: 160%;
+    font-weight: 300;
+}
+.regP{
+    @include regP;
+}
+
+@mixin regSmallP{
+    font-size: 14px;
+    line-height: 150%;
+    font-weight: 300;
+}
+.regSmallP{
+    @include regSmallP;
+}
+
+@mixin regCaption{
+    font-size: 12px;
+    line-height: 150%;
+    font-weight: 300;
+}
+.regCaption{
+    @include regCaption;
+}

@@ -1,0 +1,59 @@
+
+//position
+@mixin abs_center{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@mixin fix_center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+//flex
+@mixin flex_between{
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex_between{
+    @include flex_between;
+}
+
+@mixin flex_between_center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex_between_center{
+    @include flex_between_center;
+}
+
+@mixin flex_start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.flex_start{
+    @include flex_start;
+}
+
+@mixin flex_start_center{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.flex_start_center{
+    @include flex_start_center;
+}
+
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

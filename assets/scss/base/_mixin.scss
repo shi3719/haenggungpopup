@@ -1,0 +1,23 @@
+//shadow
+@mixin app_bar_shadow{
+    box-shadow: 0 0 10px rgba($color: $darkGray, $alpha: 0.1);
+}
+
+@mixin small_shadow {
+    box-shadow: 0 0 5px rgba($color: $darkGray, $alpha: 0.1);
+}
+
+//transition
+@mixin transition02{
+    transition: all .2s ease-in-out;
+}
+
+@mixin transition04{
+    transition: all .4s ease-in-out;
+}
+
+//background
+@mixin bgCover{
+    background-position: center;
+    background-size: cover;
+}

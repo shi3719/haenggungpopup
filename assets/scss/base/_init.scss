@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "futura-pt",Pretendard,BigCaslon,NotoSans,"Malgun Gothic","맑은 고딕","Nanum Gothic","나눔 고딕","돋움",dotum,sans-serif;
+    word-break: keep-all;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+$breakPoint: 720px;
+
+@mixin mobile {
+    @media (max-width: #{$breakPoint - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: $breakPoint) {
+        @content;
+    }
+}
+
+.web_none{
+    @include tablet{
+        display: none;
+    }
+}
+
+.mobile_none{
+    @include mobile{
+        display: none;
+    }
+}
+
+/* input 기본 스타일 초기화 */
+input {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear { display: none; }
+
+/* input type number 에서 화살표 제거 */
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+
+input[type='number'] {
+    -moz-appearance: textfield;
+}

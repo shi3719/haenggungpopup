@@ -1,0 +1,394 @@
+@charset "UTF-8";
+@font-face {
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 500;
+  src: url(/assets/fonts/Pretendard-Medium.woff);
+  src: url(/assets/fonts/Pretendard-Medium.woff) format("woff");
+}
+@font-face {
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 700;
+  src: url(/assets/fonts/Pretendard-Bold.woff);
+  src: url(/assets/fonts/Pretendard-Bold.woff) format("woff");
+}
+@font-face {
+  font-family: BigCaslon;
+  font-style: bold;
+  font-weight: 700;
+  src: url(/assets/fonts/BigCaslonFB-Bold.ttf);
+  src: url(/assets/fonts/BigCaslonFB-Bold.ttf) format("ttf");
+}
+@font-face {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: "futura-pt", Pretendard, BigCaslon, NotoSans, "Malgun Gothic", "맑은 고딕", "Nanum Gothic", "나눔 고딕", "돋움", dotum, sans-serif;
+  word-break: keep-all;
+  word-wrap: break-word;
+  box-sizing: border-box;
+}
+
+@media (min-width: 720px) {
+  .web_none {
+    display: none;
+  }
+}
+
+@media (max-width: 719px) {
+  .mobile_none {
+    display: none;
+  }
+}
+
+/* input 기본 스타일 초기화 */
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.boldCaslon {
+  font-family: BigCaslon;
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: 700;
+}
+
+.boldBiggest {
+  font-size: 24px;
+  line-height: 135%;
+  font-weight: 700;
+}
+
+.boldBigger {
+  font-size: 22px;
+  line-height: 135%;
+  font-weight: 700;
+}
+
+.boldBigP {
+  font-size: 18px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+.boldP {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+.medSmallP {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 500;
+}
+
+.regP {
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 300;
+}
+
+.regSmallP {
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.regCaption {
+  font-size: 12px;
+  line-height: 150%;
+  font-weight: 300;
+}
+
+.flex_between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex_between_center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex_start {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex_start_center {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.spacing_b_5 {
+  margin-bottom: 5px;
+}
+
+.spacing_b_10 {
+  margin-bottom: 10px;
+}
+
+.spacing_b_15 {
+  margin-bottom: 15px;
+}
+
+.spacing_b_20 {
+  margin-bottom: 20px;
+}
+
+.spacing_b_30 {
+  margin-bottom: 30px !important;
+}
+
+.spacing_b_40 {
+  margin-bottom: 40px;
+}
+
+.spacing_b_50 {
+  margin-bottom: 50px;
+}
+
+.spacing_b_70 {
+  margin-bottom: 70px;
+}
+
+.spacing_b_100 {
+  margin-bottom: 100px;
+}
+
+.spacing_t_10 {
+  margin-top: 10px;
+}
+
+.spacing_t_30 {
+  margin-top: 30px;
+}
+
+.spacing_t_50 {
+  margin-top: 50px;
+}
+
+.spacing_t_60 {
+  margin-top: 60px;
+}
+
+.spacing_t_100 {
+  margin-top: 100px;
+}
+
+.spacing_r_15 {
+  margin-right: 15px;
+}
+
+body {
+  background-color: #D45327;
+}
+
+.logo {
+  width: 110px;
+  height: 110px;
+  background-position: center;
+  background-size: cover;
+  margin: 0 auto;
+  margin-top: 50px;
+  opacity: 0.8;
+}
+
+.text_wrap {
+  margin: 42px auto;
+}
+.text_wrap p, .text_wrap h1, .text_wrap h2 {
+  text-align: center;
+  color: white;
+}
+.text_wrap p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 140%;
+}
+.text_wrap h1, .text_wrap h2 {
+  margin-bottom: 24px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 140%;
+}
+.text_wrap .description {
+  line-height: 160%;
+  font-size: 15px;
+}
+.text_wrap.black p, .text_wrap.black h1, .text_wrap.black h2 {
+  color: #333333;
+}
+
+.card_wrap {
+  width: 92%;
+  margin: 0 auto;
+  max-width: 410px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  background-color: transparent;
+  border: none;
+  width: calc((100% - 24px) / 3);
+  height: 152px;
+  perspective: 1000px;
+  margin-bottom: 12px;
+  box-shadow: 1px 1px 8px rgba(148, 38, 0, 0.3);
+  transition: all 0.4s ease-in-out;
+  /* perspective : 원근법 
+  3D effect를 원하지 않는다면 지우세요 */
+}
+.flip-card:nth-child(2n) {
+  opacity: 0.8;
+}
+.flip-card.off {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.flip-card.off:nth-child(2n) {
+  opacity: 0.3;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  /* preserve-3d : 변환된 자식 요소가 3D 변환을 유지하도록 합니다. */
+}
+
+.flip-card.on {
+  opacity: 1 !important;
+}
+.flip-card.on .flip-card-inner {
+  transform: rotateY(180deg);
+  /* Y축으로 180도 flip되게 만들어줍니다 */
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+}
+
+.flip-card-front::after {
+  content: "";
+  display: block;
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  border-radius: 9px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #D45327;
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+}
+
+.popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.15);
+  display: none;
+  opacity: 0;
+}
+.popup .popup_wrap {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 86%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.popup .selected_card {
+  width: calc((92vw - 24px) / 3);
+  height: 152px;
+  border-radius: 10px;
+  background-position: center;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.btn {
+  padding: 15px 0;
+  width: calc(100% - 60px);
+  text-align: center;
+  background-color: #D45327;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 36px;
+  font-weight: 600;
+}
+
+.popup.on {
+  display: block;
+  animation-name: view;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes view {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}/*# sourceMappingURL=main.css.map */
