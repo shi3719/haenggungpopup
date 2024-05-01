@@ -225,12 +225,13 @@ body {
   background-position: center;
   background-size: cover;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 40px;
   opacity: 0.8;
 }
 
 .text_wrap {
   margin: 42px auto;
+  margin-top: 32px;
 }
 .text_wrap p, .text_wrap h1, .text_wrap h2 {
   text-align: center;
@@ -346,6 +347,7 @@ body {
   background-color: #fff;
   border-radius: 20px;
   width: 86%;
+  max-width: 380px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -373,6 +375,10 @@ body {
   border-radius: 10px;
   margin-bottom: 36px;
   font-weight: 600;
+}
+.btn.on {
+  color: #D45327;
+  background-color: #fff;
 }
 
 .popup.on {

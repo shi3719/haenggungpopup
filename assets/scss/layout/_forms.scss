@@ -7,12 +7,13 @@ body{
     height: 110px;
     @include bgCover;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 40px;
     opacity: 0.8;
 }
 
 .text_wrap{
     margin: 42px auto;
+    margin-top: 32px;
 
     p,h1,h2{
         text-align: center;
@@ -138,6 +139,7 @@ body{
         background-color: $white;
         border-radius: 20px;
         width: 86%;
+        max-width: 380px;
         @include fix_center;
         @include flex_center;
         flex-direction: column;
@@ -161,6 +163,11 @@ body{
     border-radius: 10px;
     margin-bottom: 36px;
     font-weight: 600;
+    
+    &.on{
+        color: $primary;
+        background-color: $white;
+    }
 }
 
 .popup.on{
