@@ -216,7 +216,7 @@ input[type=number] {
 }
 
 body {
-  background-color: #D45327;
+  background-color: #333333;
 }
 
 .logo {
@@ -326,7 +326,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 1px solid #D45327;
+  border: 1px solid #333333;
 }
 
 .flip-card-back {
@@ -371,14 +371,14 @@ body {
   padding: 15px 0;
   width: calc(100% - 60px);
   text-align: center;
-  background-color: #D45327;
+  background-color: #333333;
   color: white;
   border-radius: 10px;
   margin-bottom: 36px;
   font-weight: 600;
 }
 .btn.on {
-  color: #D45327;
+  color: #333333;
   background-color: #fff;
 }
 
