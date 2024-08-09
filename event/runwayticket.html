@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haenggung-dong Popup</title>
+
+    <script src="/assets/js/jquery3.6.1.js"></script>
+    <link rel="stylesheet" href="https://use.typekit.net/uzb6mns.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <link rel="stylesheet" href="/assets/css/main.css">
+
+    <link rel="apple-touch-icon" href="/apple_touch_icon.png">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+    <meta property="og:title" content="ANV Raffle Event" />
+    <meta property="og:description" content="Flea Market Raffle Event" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://raffleevent.vercel.app/" />
+    <meta property="og:image" content="https://raffleevent.vercel.app/assets/images/ogimage.png" />
+</head>
+
+<body>
+    <section>
+        <div class="logo" style="background-image: url(/assets/images/logo.png);"></div>
+        <div class="text_wrap">
+            <p>Flea Market</p>
+            <h1>Raffle Event</h1>
+
+            <p class="description">기회는 단 한번! 아래 카드 중<br>하나를 선택하여 뒤집어주세요.</p>
+        </div>
+        <ul class="card_wrap">
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card1.png);">
+                    </div>
+                    <div class="flip-card-back" style="background-image: url(/assets/images/gift1.png);">       
+                    </div>
+                </div>
+            </li>
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card2.png);">
+                    </div>
+                    <div class="flip-card-back">       
+                    </div>
+                </div>
+            </li>
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card3.png);">
+                    </div>
+                    <div class="flip-card-back">       
+                    </div>
+                </div>
+            </li>
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card4.png);">
+                    </div>
+                    <div class="flip-card-back">       
+                    </div>
+                </div>
+            </li>
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card5.png);">
+                    </div>
+                    <div class="flip-card-back">       
+                    </div>
+                </div>
+            </li>
+            <li class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front" style="background-image: url(/assets/images/card6.png);">
+                    </div>
+                    <div class="flip-card-back">       
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="popup">
+        <div class="popup_wrap">
+            <div class="text_wrap black">
+                <p>Raffle Event</p>
+                <h2 class="result_wrap">Logo Sticker</h2>
+    
+                <p class="description">스태프에게 화면을 보여주시고<br>상품을 수령하세요😊</p>
+            </div>
+
+            <div class="selected_card" style="background-image: url(/assets/images/gift1.png);"></div>
+
+            <p class="btn">수령 확인</p>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

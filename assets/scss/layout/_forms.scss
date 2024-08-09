@@ -11,9 +11,22 @@ body{
     opacity: 0.8;
 }
 
+header{
+    >div{
+        @include flex_between;
+        p{
+            font-size: 16px;
+            color: $white;
+        }
+        padding: 20px;
+        border-top: 1px solid $white;
+        border-bottom: 1px solid $white;
+    }
+    margin: 20px 20px 0 20px;
+}
+
 .text_wrap{
-    margin: 42px auto;
-    margin-top: 32px;
+    margin: 32px auto;
 
     p,h1,h2{
         text-align: center;
@@ -29,7 +42,7 @@ body{
     h1,h2{
         margin-bottom: 24px;
         font-weight: 500;
-        font-size: 32px;
+        font-size: 62px;
         line-height: 140%;
     }
 
@@ -46,9 +59,8 @@ body{
 }
 
 .card_wrap{
-    width: 92%;
+    width: calc(100% - 40px);
     margin: 0 auto;
-    max-width: 410px;
     
     @include flex_between;
     flex-wrap: wrap;
@@ -57,11 +69,10 @@ body{
 .flip-card {
     background-color: transparent;
     border: none;
-    width: calc((100% - 24px) / 3);
+    width: calc((100% - 60px) / 7);
     height: 152px;
     perspective: 1000px; 
-    margin-bottom: 12px;
-    box-shadow: 1px 1px 8px rgba(148, 38, 0, 0.3);
+    margin-bottom: 10px;
     @include transition04;
   /* perspective : 원근법 
   3D effect를 원하지 않는다면 지우세요 */
@@ -103,20 +114,7 @@ body{
     height: 100%;
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
-    border-radius: 10px;
     @include bgCover;
-}
-
-.flip-card-front {
-    &::after{
-        content: "";
-        display: block;
-        width: calc(100% - 10px);
-        height: calc(100% - 10px);
-        border-radius: 9px;
-        @include fix_center;
-        border: 1px solid $primary;
-    }
 }
 
 .flip-card-back{
@@ -187,5 +185,63 @@ body{
 
     to{
         opacity: 1;
+    }
+}
+
+.h_popup_wrap{
+    display: flex;
+    margin: 0 20px;
+    >div{
+        width: 50%;
+    }
+    border-bottom: 1px solid $white;
+}
+
+.text_wrap img{
+    width: 24%;
+    margin: 10vh auto;
+    display: block;
+}
+
+.link_wrap{
+    ul{
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 102px)
+    }
+
+}
+
+.linked_item{
+    @include flex_between;
+    padding: 0 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid $white;
+    height: 100%;
+    align-items: center;
+
+    >div{
+        img{
+            max-width: 50%; 
+            max-height: 32px;
+            margin-bottom: 20px;   
+        }
+        
+        p{
+            color: $white;
+        }
+    
+        .caption{
+            opacity: 0.5;
+            margin-top: 5px;
+        }
+    }   
+    .partin{
+        color: $point;
+        font-weight: 600;
+    }
+
+    &:last-child{
+        border: none;
     }
 }
