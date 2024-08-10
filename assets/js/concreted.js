@@ -1,4 +1,4 @@
-const prizes = [
+const prizescon = [
     { name: "콘크리티드 마스킹 테이프", max: 97 },
     { name: "콘크리티드 향수", max: 3 }
 ];

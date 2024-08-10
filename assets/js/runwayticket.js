@@ -1,6 +1,6 @@
 const prizes = [
-    { name: "My necklace 반팔티 증정", max: 3 },
-    { name: "Rub-T land 목걸이", max: 4 },
+    { name: "My necklace 반팔티 증정", max: 2 },
+    { name: "Rub-T land 목걸이", max: 2 },
     { name: "온라인 20% 할인 쿠폰", max: 5 },
     { name: "온라인 10% 할인 쿠폰", max: 30 },
     { name: "음료수 한 잔 더!", max: 30 }
