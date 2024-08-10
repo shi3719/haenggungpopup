@@ -247,7 +247,10 @@ header > div p {
 .text_wrap {
   margin: 32px auto;
 }
-.text_wrap p, .text_wrap h1, .text_wrap h2 {
+.text_wrap h1 {
+  margin-top: 5vh;
+}
+.text_wrap p, .text_wrap h1, .text_wrap h2, .text_wrap h3 {
   text-align: center;
   color: white;
 }
@@ -262,11 +265,15 @@ header > div p {
   font-size: 62px;
   line-height: 140%;
 }
+.text_wrap h3 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
 .text_wrap .description {
   line-height: 160%;
   font-size: 15px;
 }
-.text_wrap.black p, .text_wrap.black h1, .text_wrap.black h2 {
+.text_wrap.black p, .text_wrap.black h1, .text_wrap.black h2, .text_wrap.black h3 {
   color: #000000;
 }
 
@@ -276,13 +283,16 @@ header > div p {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid white;
 }
 
 .flip-card {
   background-color: transparent;
   border: none;
-  width: calc((100% - 60px) / 7);
-  height: 152px;
+  width: calc((100% - 40px) / 5);
+  height: 40vh;
   perspective: 1000px;
   margin-bottom: 10px;
   transition: all 0.4s ease-in-out;
@@ -321,6 +331,7 @@ header > div p {
   position: absolute;
   width: 100%;
   height: 100%;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   background-position: center;
   background-size: cover;
@@ -342,7 +353,6 @@ header > div p {
 }
 .popup .popup_wrap {
   background-color: #fff;
-  border-radius: 20px;
   width: 86%;
   max-width: 380px;
   position: absolute;
@@ -353,15 +363,23 @@ header > div p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  z-index: 100;
 }
 .popup .selected_card {
   width: calc((92vw - 24px) / 3);
   max-width: 120px;
   height: 152px;
-  border-radius: 10px;
   background-position: center;
   background-size: cover;
   margin-bottom: 50px;
+}
+.popup .popupclosed {
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .btn {
@@ -406,8 +424,8 @@ header > div p {
 }
 
 .text_wrap img {
-  width: 24%;
-  margin: 10vh auto;
+  width: 90%;
+  margin: 50PX auto;
   display: block;
 }
 
@@ -444,4 +462,7 @@ header > div p {
 }
 .linked_item:last-child {
   border: none;
-}/*# sourceMappingURL=main.css.map */
+}
+.linked_item:nth-child(2) {
+  background-color: rgba(255, 255, 255, 0.04);
+}
