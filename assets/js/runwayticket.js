@@ -28,19 +28,20 @@ function getRandomPrize() {
         return null;
     }
     
+    // 총 가중치 계산 (남은 수량에 비례하여 가중치 부여 - 제곱하여 가중치 상승)
     let totalWeight = availablePrizes.reduce((sum, prize, index) => {
         let availableCount = prize.max - counts[prizes.indexOf(prize)];
-        return sum + availableCount;
+        return sum + Math.pow(availableCount, 2); // 남은 수량의 제곱으로 가중치 증가
     }, 0);
 
-    // Generate a random number within the total weight
+    // 총 가중치 내에서 랜덤 숫자 생성
     let randomWeight = Math.random() * totalWeight;
 
-    // Select a product based on weighted probability
+    // 가중치 기반 상품 선택
     let cumulativeWeight = 0;
     for (let prize of availablePrizes) {
         let availableCount = prize.max - counts[prizes.indexOf(prize)];
-        cumulativeWeight += availableCount;
+        cumulativeWeight += Math.pow(availableCount, 2); // 제곱된 가중치 누적
         if (randomWeight <= cumulativeWeight) {
             let prizeIndex = prizes.indexOf(prize);
             counts[prizeIndex]++;
@@ -61,8 +62,9 @@ document.querySelectorAll('.flip-card').forEach((card) => {
             document.querySelector('.result_wrap').textContent = selectedPrize;
             document.querySelector('.popup').classList.add('on');
 
-            // 예시: 선택된 상품의 이미지를 표시하는 경우
-            // document.querySelector('.selected_card').style.backgroundImage = 'url(선택된 이미지 경로)';
+            // 선택된 상품의 이미지 표시 (예시)
+            const selectedPrizeIndex = prizes.findIndex(prize => prize.name === selectedPrize);
+            document.querySelector('.selected_card').style.backgroundImage = `url(/assets/images/gift${selectedPrizeIndex + 1}.png)`;
         }
     });
 });
