@@ -5,19 +5,19 @@ const prizescon = [
 
 // 로컬 스토리지에서 상품 카운트 가져오기
 function getPrizeCounts() {
-    const storedCounts = localStorage.getItem('prizeCounts');
-    return storedCounts ? JSON.parse(storedCounts) : Array(prizes.length).fill(0);
+    const storedCounts = localStorage.getItem('prizeCountscon');
+    return storedCounts ? JSON.parse(storedCounts) : Array(prizescon.length).fill(0);
 }
 
 // 상품 카운트 업데이트하여 로컬 스토리지에 저장
 function updatePrizeCounts(counts) {
-    localStorage.setItem('prizeCounts', JSON.stringify(counts));
+    localStorage.setItem('prizeCountscon', JSON.stringify(counts));
 }
 
 // 랜덤 상품 선택
 function getRandomPrize() {
     let counts = getPrizeCounts();
-    let availablePrizes = prizes.filter((prize, index) => counts[index] < prize.max);
+    let availablePrizes = prizescon.filter((prize, index) => counts[index] < prize.max);
     
     // 가능한 상품이 없을 경우 (다 사용됨)
     if (availablePrizes.length === 0) {
@@ -26,7 +26,7 @@ function getRandomPrize() {
     }
     
     let totalWeight = availablePrizes.reduce((sum, prize, index) => {
-        let availableCount = prize.max - counts[prizes.indexOf(prize)];
+        let availableCount = prize.max - counts[prizescon.indexOf(prize)];
         return sum + availableCount;
     }, 0);
 
@@ -36,10 +36,10 @@ function getRandomPrize() {
     // Select a product based on weighted probability
     let cumulativeWeight = 0;
     for (let prize of availablePrizes) {
-        let availableCount = prize.max - counts[prizes.indexOf(prize)];
+        let availableCount = prize.max - counts[prizescon.indexOf(prize)];
         cumulativeWeight += availableCount;
         if (randomWeight <= cumulativeWeight) {
-            let prizeIndex = prizes.indexOf(prize);
+            let prizeIndex = prizescon.indexOf(prize);
             counts[prizeIndex]++;
             updatePrizeCounts(counts);
             return prize.name;
